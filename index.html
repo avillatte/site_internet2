@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KM Éducateur Canin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="img/logo.jpeg" alt="Logo KM" class="logo-img">
+        <span class="logo-text">KM éducateur canin</span>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil <span class="dog-icon">🐕</span></a></li>
+        <li><a href="services.html">Services <span class="dog-icon">🐕</span></a></li>
+        <li><a href="apropos.html">À propos <span class="dog-icon">🐕</span></a></li>
+        <li><a href="contact.html">Contact <span class="dog-icon">🐕</span></a></li>
+        <li><a href="blog.html">Blog <span class="dog-icon">🐕</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="bg-image"></div>
+    <h1 class="animated-text">Un chien bien éduqué, une relation apaisée</h1>
+    <p>Éducation canine adaptée à vos besoins et à votre compagnon.</p>
+    <img src="img/logo.jpeg" alt="Chien heureux avec son maître">
+    <a href="#reservation" class="btn-reserver">🐾 Réserver un créneau 🐾</a>
+  </section>
+
+  <section class="avis">
+    <h2>Ils nous font confiance 🐾</h2>
+    <div id="avis-google">
+      <p>[Les avis Google apparaîtront ici]</p>
+    </div>
+  </section>
+
+  <section id="reservation" class="formulaire">
+    <h2>🐾 Rentrons en contact 🐾</h2>
+    <p>Des questions sur l'éducation de votre chien ? Remplissez le formulaire étape par étape !</p>
+    
+    <form id="reservationForm">
+      <div class="step active">
+        <input type="text" name="nom" placeholder="Votre nom *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="prenom" placeholder="Votre prénom *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="tel" name="telephone" placeholder="Numéro de téléphone *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="email" name="email" placeholder="Votre e-mail *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="adresse" placeholder="Votre adresse postale *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="chien" placeholder="Votre chien (nom, race, âge) *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="devis" required>
+          <option value="">Recevoir un devis pour un bilan ? *</option>
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="visio" required>
+          <option value="">Rendez-vous visio ? *</option>
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="rappel" required>
+          <option value="">Souhaitez-vous être rappelé ? *</option>
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <textarea name="message" placeholder="Votre message"></textarea>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="submit" class="btn-submit">🐶 Soumettre 🐶</button>
+        </div>
+      </div>
+    </form>
+
+    <p id="confirmation" class="hidden">✅ Réservation validée ! Merci 🐾</p>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="contact.html" class="social-link">Contact</a>
+      </div>
+      <p>&copy; 2025 KM Éducateur Canin - Site refait par Alexis</p>
+    </div>
+  </footer>
+
+  <!-- Popup pour les services -->
+  <div id="servicePopup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <h2 id="popupTitle"></h2>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("reservationForm");
+      const confirmation = document.getElementById("confirmation");
+      const steps = document.querySelectorAll(".step");
+      let currentStep = 0;
+
+      // Navigation du formulaire
+      function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+          step.classList.toggle("active", index === stepIndex);
+        });
+        currentStep = stepIndex;
+      }
+
+      // Boutons Suivant
+      document.querySelectorAll(".btn-next").forEach(button => {
+        button.addEventListener("click", () => {
+          if (currentStep < steps.length - 1) {
+            showStep(currentStep + 1);
+          }
+        });
+      });
+
+      // Boutons Précédent
+      document.querySelectorAll(".btn-prev").forEach(button => {
+        button.addEventListener("click", () => {
+          if (currentStep > 0) {
+            showStep(currentStep - 1);
+          }
+        });
+      });
+
+      // Soumission du formulaire
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Récupération des données
+          const formData = new FormData(form);
+          const data = {};
+          formData.forEach((value, key) => data[key] = value);
+
+          // Charger l'historique existant
+          const existing = JSON.parse(localStorage.getItem("reservations") || "[]");
+
+          // Ajouter la nouvelle entrée avec date
+          existing.push({
+            ...data,
+            date: new Date().toLocaleString(),
+          });
+
+          // Sauvegarder dans localStorage
+          localStorage.setItem("reservations", JSON.stringify(existing));
+
+          // Envoi par email et SMS (simulation)
+          sendEmail(data);
+          sendSMS(data);
+
+          // Confirmation visuelle
+          form.innerHTML = "<p class='confirmation'>✅ Réservation validée ! Merci 🐾</p>";
+        });
+      }
+
+      // Fonctions d'envoi (simulation)
+      function sendEmail(data) {
+        console.log("Email envoyé avec les données:", data);
+        // Ici vous intégreriez votre service d'envoi d'email
+      }
+
+      function sendSMS(data) {
+        console.log("SMS envoyé avec les données:", data);
+        // Ici vous intégreriez votre service d'envoi de SMS
+      }
+
+      // Gestion du popup pour les services
+      const servicePopup = document.getElementById("servicePopup");
+      const closePopup = document.querySelector(".close-popup");
+
+      closePopup.addEventListener("click", () => {
+        servicePopup.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === servicePopup) {
+          servicePopup.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

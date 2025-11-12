@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - KM Éducateur Canin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="img/logo.jpeg" alt="Logo KM" class="logo-img">
+        <span class="logo-text">KM éducateur canin</span>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil <span class="dog-icon">🐕</span></a></li>
+        <li><a href="services.html">Services <span class="dog-icon">🐕</span></a></li>
+        <li><a href="apropos.html">À propos <span class="dog-icon">🐕</span></a></li>
+        <li><a href="contact.html" class="active">Contact <span class="dog-icon">🐕</span></a></li>
+        <li><a href="blog.html">Blog <span class="dog-icon">🐕</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="bg-image" style="background-image: url('img/banniere.jpeg')"></div>
+    <h1 class="animated-text">Contactez-nous</h1>
+    <p>Discutons de l'éducation de votre compagnon à quatre pattes</p>
+  </section>
+
+  <section class="formulaire">
+    <h2>🐾 Prenons contact 🐾</h2>
+    <p>Remplissez le formulaire étape par étape pour une prise de contact personnalisée</p>
+    
+    <form id="contactForm">
+      <div class="step active">
+        <input type="text" name="nom" placeholder="Votre nom *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="prenom" placeholder="Votre prénom *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="tel" name="telephone" placeholder="Numéro de téléphone *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="email" name="email" placeholder="Votre e-mail *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="adresse" placeholder="Votre adresse postale *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="text" name="chien" placeholder="Votre chien (nom, race, âge) *" required>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="service" required>
+          <option value="">Service souhaité *</option>
+          <option value="education">Éducation de Base</option>
+          <option value="comportement">Problèmes Comportementaux</option>
+          <option value="socialisation">Socialisation</option>
+          <option value="visio">Consultation Visio</option>
+          <option value="balade">Balades Éducatives</option>
+          <option value="chiot">Éducation Chiot</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="urgence" required>
+          <option value="">Niveau d'urgence *</option>
+          <option value="faible">Peu urgent - Conseil général</option>
+          <option value="moyen">Urgence moyenne - Problème récent</option>
+          <option value="elevee">Urgence élevée - Situation critique</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <select name="rappel" required>
+          <option value="">Souhaitez-vous être rappelé ? *</option>
+          <option value="oui">Oui, rappelez-moi</option>
+          <option value="non">Non, contact par email uniquement</option>
+        </select>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="button" class="btn-next">Suivant ➡</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <textarea name="message" placeholder="Décrivez brièvement votre situation et vos attentes..."></textarea>
+        <div class="form-buttons">
+          <button type="button" class="btn-prev">⬅ Précédent</button>
+          <button type="submit" class="btn-submit">🐶 Envoyer ma demande 🐶</button>
+        </div>
+      </div>
+    </form>
+
+    <p id="confirmation" class="hidden">✅ Demande envoyée ! Nous vous recontactons dans les 24h 🐾</p>
+  </section>
+
+  <section class="contact-info">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Autres moyens de contact</h2>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Téléphone</h3>
+            <p><strong>06 11 86 08 81</strong></p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><strong>contact@km-educateur-canin.fr</strong></p>
+            <p>Réponse sous 24h</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Zone d'intervention</h3>
+            <p><strong>Département .. et alentours</strong></p>
+            <p>Déplacement à domicile possible</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <img src="img/contact-dog.jpg" alt="Chien heureux">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">LinkedIn</a>
+      </div>
+      <p>&copy; 2025 KM Éducateur Canin - Site refait par Alexis</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const confirmation = document.getElementById("confirmation");
+      const steps = document.querySelectorAll(".step");
+      let currentStep = 0;
+
+      // Vérifier si c'est une demande de visio
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('service') === 'visio') {
+        // Pré-remplir le service avec visio
+        setTimeout(() => {
+          const serviceSelect = document.querySelector('select[name="service"]');
+          if (serviceSelect) {
+            serviceSelect.value = 'visio';
+          }
+        }, 1000);
+      }
+
+      // Navigation du formulaire
+      function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+          step.classList.toggle("active", index === stepIndex);
+        });
+        currentStep = stepIndex;
+      }
+
+      // Boutons Suivant
+      document.querySelectorAll(".btn-next").forEach(button => {
+        button.addEventListener("click", () => {
+          if (currentStep < steps.length - 1) {
+            showStep(currentStep + 1);
+          }
+        });
+      });
+
+      // Boutons Précédent
+      document.querySelectorAll(".btn-prev").forEach(button => {
+        button.addEventListener("click", () => {
+          if (currentStep > 0) {
+            showStep(currentStep - 1);
+          }
+        });
+      });
+
+      // Soumission du formulaire
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Récupération des données
+          const formData = new FormData(form);
+          const data = {};
+          formData.forEach((value, key) => data[key] = value);
+
+          // Sauvegarde dans localStorage
+          const existing = JSON.parse(localStorage.getItem("contacts") || "[]");
+          existing.push({
+            ...data,
+            date: new Date().toLocaleString(),
+            type: 'contact'
+          });
+          localStorage.setItem("contacts", JSON.stringify(existing));
+
+          // Envoi par email et SMS
+          sendContactEmail(data);
+          if (data.rappel === 'oui') {
+            sendContactSMS(data);
+          }
+
+          // Confirmation visuelle
+          form.innerHTML = `
+            <div class="confirmation-message">
+              <h3>✅ Demande envoyée avec succès !</h3>
+              <p>Merci ${data.prenom} pour votre confiance.</p>
+              <p>Nous vous recontactons dans les 24 heures ouvrables.</p>
+              <p><strong>Prochaines étapes :</strong></p>
+              <ul>
+                <li>📞 Appel téléphonique de confirmation</li>
+                <li>📅 Prise de rendez-vous</li>
+                <li>📋 Bilan comportemental</li>
+              </ul>
+              <a href="index.html" class="btn-reserver">Retour à l'accueil</a>
+            </div>
+          `;
+        });
+      }
+
+      // Fonctions d'envoi (simulation)
+      function sendContactEmail(data) {
+        console.log("Email de contact envoyé:", data);
+        // Intégration avec votre service d'email
+      }
+
+      function sendContactSMS(data) {
+        console.log("SMS de rappel programmé:", data);
+        // Intégration avec votre service SMS
+      }
+    });
+  </script>
+
+  <style>
+    .contact-info {
+      padding: 60px 20px;
+      background: linear-gradient(to right, #f8fafc, #e0f7fa);
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .contact-method {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-method h3 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+
+    .confirmation-message {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .confirmation-message ul {
+      text-align: left;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+  </style>
+</body>
+</html>

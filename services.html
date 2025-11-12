@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - KM Éducateur Canin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="img/logo.jpeg" alt="Logo KM" class="logo-img">
+        <span class="logo-text">KM éducateur canin</span>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil <span class="dog-icon">🐕</span></a></li>
+        <li><a href="services.html" class="active">Services <span class="dog-icon">🐕</span></a></li>
+        <li><a href="apropos.html">À propos <span class="dog-icon">🐕</span></a></li>
+        <li><a href="contact.html">Contact <span class="dog-icon">🐕</span></a></li>
+        <li><a href="blog.html">Blog <span class="dog-icon">🐕</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="bg-image" style="background-image: url('img/banniere.jpeg')"></div>
+    <h1 class="animated-text">Nos Services d'Éducation Canine</h1>
+    <p>Des solutions adaptées à chaque chien et chaque maître</p>
+  </section>
+
+  <section class="services-grid">
+    <div class="service-card" data-service="education">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop" alt="Éducation de base" class="service-img">
+      <div class="service-content">
+        <h2>Éducation de Base</h2>
+        <p>Apprentissage des commandes essentielles : assis, couché, pas bouger, rappel...</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="comportement">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop" alt="Problèmes de comportement" class="service-img">
+      <div class="service-content">
+        <h2>Problèmes Comportementaux</h2>
+        <p>Solutions pour l'agressivité, l'anxiété, les aboiements excessifs...</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="socialisation">
+      <img src="https://images.unsplash.com/photo-1554456854-56aafc8d6a0d?w=400&h=300&fit=crop" alt="Socialisation" class="service-img">
+      <div class="service-content">
+        <h2>Socialisation</h2>
+        <p>Aider votre chien à bien interagir avec ses congénères et son environnement</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="visio">
+      <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Consultation en visio" class="service-img">
+      <div class="service-content">
+        <h2>Consultation Visio</h2>
+        <p>Bilan et conseils à distance pour un premier contact ou un suivi régulier</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="balade">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop" alt="Balade éducative" class="service-img">
+      <div class="service-content">
+        <h2>Balades Éducatives</h2>
+        <p>Apprentissage en situation réelle lors de promenades encadrées</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="chieniot">
+      <img src="https://images.unsplash.com/photo-1558322397-187d27a8e6e7?w=400&h=300&fit=crop" alt="Éducation chiot" class="service-img">
+      <div class="service-content">
+        <h2>Éducation Chiot</h2>
+        <p>Programme spécialisé pour les jeunes chiens de 2 à 12 mois</p>
+        <div class="service-expand">+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis">
+    <h2>Ils nous font confiance 🐾</h2>
+    <div id="avis-google">
+      <p>[Les avis Google apparaîtront ici]</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">LinkedIn</a>
+      </div>
+      <p>&copy; 2025 KM Éducateur Canin - Site refait par Alexis</p>
+    </div>
+  </footer>
+
+  <!-- Popup pour les services -->
+  <div id="servicePopup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <h2 id="popupTitle"></h2>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Données des services
+      const servicesData = {
+        education: {
+          title: "Éducation de Base",
+          content: `
+            <h3>Les fondamentaux pour une vie harmonieuse</h3>
+`
+        },
+        comportement: {
+          title: "Problèmes Comportementaux",
+          content: `
+            <h3>Solutions personnalisées</h3>
+          `
+        },
+        socialisation: {
+          title: "Socialisation",
+          content: `
+            <h3>Un chien bien dans ses pattes</h3>
+          `
+        },
+        visio: {
+          title: "Consultation Visio",
+          content: `
+            <h3>Conseils à distance</h3>
+
+          `
+        },
+        balade: {
+          title: "Balades Éducatives",
+          content: `
+            <h3>Apprendre en marchant</h3>
+
+          `
+        },
+        chieniot: {
+          title: "Éducation Chiot",
+          content: `
+            <h3>Les bases dès le plus jeune âge</h3>
+
+          `
+        }
+      };
+
+      // Gestion des popups
+      const serviceCards = document.querySelectorAll('.service-card');
+      const servicePopup = document.getElementById('servicePopup');
+      const popupTitle = document.getElementById('popupTitle');
+      const popupContent = document.getElementById('popupContent');
+      const closePopup = document.querySelector('.close-popup');
+
+      serviceCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          const serviceType = card.getAttribute('data-service');
+          const serviceData = servicesData[serviceType];
+          
+          if (serviceData) {
+            popupTitle.textContent = serviceData.title;
+            popupContent.innerHTML = serviceData.content;
+            servicePopup.style.display = 'block';
+          }
+        });
+      });
+
+      closePopup.addEventListener('click', () => {
+        servicePopup.style.display = 'none';
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === servicePopup) {
+          servicePopup.style.display = 'none';
+        }
+      });
+    });
+
+    function openVisioBooking() {
+      // Redirection vers la page de contact avec pré-remplissage pour visio
+      window.location.href = 'contact.html?service=visio';
+    }
+  </script>
+</body>
+</html>
